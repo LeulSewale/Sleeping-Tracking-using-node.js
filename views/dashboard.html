@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/1a7be0b1e9.js" crossorigin="anonymous"></script>
+    <script src="assets/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <title>Dashboard Page </title>
+</head>
+
+<body>
+    <div id="header">
+        <nav class="row-sm bg-dark navbar">
+            <h2 id="blog" class="text-light">Sleep Tracking</h2>
+            <ul class="nav float-right justify-content-center">
+                <li class="h4 nav-item col-sm">
+                    <a class="nav-link text-light active" href="/register">Register</a>
+                </li>
+                <li class="h4 nav-item col-sm">
+                    <a class="nav-link text-light" href="/login">Login</a>
+                </li>
+                <li class="h4 nav-item col-sm">
+                    <a class="nav-link text-light" href="/userPage">Profile</a>
+                </li>
+                <li class="h4 nav-item col-sm">
+                    <a class="nav-link text-light" onclick="openForm();return false; " href="/adminPage">Admin</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="card-deck">
+                <div id="cardsm8" class="card col-sm-8">
+                    <div class="card-header bg-light">
+                        <h3 class="h1 text-primary text-capitalize">Welcome To Sleeping Tracking Home Page</h3>
+                    </div>
+                    <div class="card-header bg-light">
+                        <h3 class="h3 text-dark"><b><u> Good sleep :</u></b>is important for our physical health and to
+                            rest our brains.
+                            Illness and stress can impinge on our chance of a good night’s sleep.
+                            Our activities can also keep us awake longer than is ideal.
+                            Smoking, watching TV, and browsing our phones before bed can have a negative effect on
+                            sleep.</h3>
+                    </div>
+                    <div class="card-body">
+                        <p><img src="./images/sleeping1.jpg" width="700" height="300" alt="sleep image" /></p>
+                        <hr />
+                        <p>If you’re not getting enough sleep, your body’s ability to regulate your blood sugar becomes
+                            disrupted and
+                            the levels of sugar in your blood can increase, and can cause diabetes.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <div id="cardsm4" class="card">
+                        <div class="row-sm bg-dark navbar">
+                            <h3 class="text-light">Search Quotes</h3>
+                        </div>
+                        <div class="card-body">
+                            <form class="form" action="#">
+                                <input type="search" class="form-control" placeholder="Search for quotes..."
+                                    id="search">
+                                <button type="button" class="row-sm bg-dark navbar text-light">Search Quote</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div id="catagories" class="row m-1">
+                        <div class="card">
+                            <div class="row-sm bg-dark navbar">
+                                <h3 class="h3 text-light">More Links</h3>
+                            </div>
+                            <div class="row card-body text-primary">
+                                <div class="col-sm-6">
+                                    <a href="#quotes">View More Quotes</a>
+                                    <a href="#feedback">Feedback</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <p class="text-secondary">posted on Aug 18,2021 at 14:00 pm.</p>
+                        <p>When the going gets tough, the tough take a nap.<br />
+                        <footer class="blockquote-footer">by Tom Hodgkinson, British Writer</footer>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer text-center" style="margin-top: 100px; background-color: rgb(14, 19, 18); color: white;">
+        <div class="font-awsome">
+            <i class="fab fa-facebook m-2"></i>
+            <i class="fab fa-twitter-square m-2"></i>
+            <i class="fab fa-instagram m-2"></i>
+            <i class="fab fa-google-plus m-2"></i>
+            <i class="far fa-envelope m-2"></i>
+        </div>
+        <p>&copy;All right reserved. Aug 20,2021</p>
+    </div>
+    <div class="form-popup" id="myForm" style="justify-content: center;">
+        <form action="/adminLogin" class="form-container" method="post">
+            <h1>Login</h1>
+            <label for="name"><b>Name</b></label>
+            <input type="text" placeholder="Enter admin name" name="name" id="admin_name" required>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter admin Password" name="psw" id="admin_pass" required>
+
+            <button type="submit" class="btn_login">Login</button>
+            <button type="button" class="btn_cancel" onclick="closeForm()">Close</button>
+        </form>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
